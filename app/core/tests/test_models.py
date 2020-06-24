@@ -14,10 +14,8 @@ class ModelTests(TestCase):
             password=password
         )
 
-
         self.assertEqual(user.email, email)
         # check_password() is a helper function that comes
         # with the django user model.
         # it returns true, if the passwprd is correct and false if not
         self.assertTrue(user.check_password(password))
-        
