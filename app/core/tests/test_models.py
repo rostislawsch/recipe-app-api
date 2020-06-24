@@ -2,8 +2,9 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 # wir importieren das, damit wir später das user model ändern können
 
+
 class ModelTests(TestCase):
-    
+
     # wir testen, ob unsere create user function einen neuen user kreiert
     def test_create_user_with_email_successful(self):
         """ Test creating a new user with an email is successful """
