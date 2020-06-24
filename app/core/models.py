@@ -5,7 +5,6 @@ from django.contrib.auth.models import BaseUserManager
 
 
 class UserManager(BaseUserManager):
-
     """ Manager for user profiles """
     def create_user(self, email, password=None, **extra_fields):
         """ Create a new user profile """
@@ -22,8 +21,8 @@ class UserManager(BaseUserManager):
         # extra_fields brauchen wir hier nicht, da wir den superuser in der
         # comandline erstellen
         user = self.create_user(email, password)
-        user.is_superuser=True
-        user.is_staff=True
+        user.is_superuser = True
+        user.is_staff = True
         user.save(self._db)
         return user
 
