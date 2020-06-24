@@ -4,7 +4,7 @@ from app.calc import add, subtract
 
 
 class CalcTests(TestCase):
-    
+
     """ Test that two numbersare added together """
     def test_add_numbers(self):
         self.assertEqual(add(3, 8), 11)
